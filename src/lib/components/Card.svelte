@@ -72,9 +72,7 @@
 			<div id={'curtain' + index} class="curtain rounded-xl"></div>
 
 			<img
-				class="max-h-[720px] max-w-[405px] rounded-xl border-4 border-gray-300"
-				width="405"
-				height="720"
+				class="max-h-full max-w-full rounded-xl border-4 border-gray-300"
 				id="img"
 				style="position: absolute;"
 				src={image}
