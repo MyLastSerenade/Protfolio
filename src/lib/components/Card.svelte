@@ -22,7 +22,6 @@
 		if (root) {
 			root.style.setProperty('--topValue', String(bg?.height || 0));
 		}
-		console.log(bg?.height);
 		$cardindex = index;
 		const curtainElement = document.getElementById('curtain' + index);
 		if (curtainElement) {
@@ -59,7 +58,7 @@
 	}
 </script>
 
-<div class="mt-8 h-full w-full">
+<div class="xl:mt-8 h-[1080px] w-full">
 	<div class="container">
 		<div
 			id="bg"
@@ -72,7 +71,7 @@
 			<div id={'curtain' + index} class="curtain rounded-xl"></div>
 
 			<img
-				class="max-h-full max-w-full rounded-xl border-4 border-gray-300"
+				class="min-h-full min-w-full rounded-xl border-4 border-gray-300"
 				id="img"
 				style="position: absolute;"
 				src={image}
@@ -95,6 +94,7 @@
 	.bg {
 		position: relative;
 		height: 100%;
+		width: 100%;
 		background-color: transparent;
 		opacity: 1;
 		z-index: 1000;
@@ -105,7 +105,6 @@
 		z-index: 998;
 		opacity: 0.9;
 		top: 0px;
-		left: 5%;
 		height: 100%;
 		width: var(--widthValue);
 		background-color: black;
@@ -120,6 +119,5 @@
 
 	img {
 		z-index: 997;
-		left: 5%;
 	}
 </style>
