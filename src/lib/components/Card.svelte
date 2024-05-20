@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { cardindex } from './cardstore';
+	import { goto } from '$app/navigation';
 	export let index: number;
 	export let image: string;
 	let root: HTMLHtmlElement | null;
@@ -68,14 +69,17 @@
 			role="button"
 			tabindex="0"
 		>
-			<div id={'curtain' + index} class="curtain rounded-xl"></div>
+			<div id={'curtain' + index} class="curtain"></div>
 
+			<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 			<img
-				class="min-h-full min-w-full rounded-xl border-4 border-gray-300"
+				class="min-h-full min-w-full border-x-4 border-gray-300"
 				id="img"
 				style="position: absolute;"
 				src={image}
 				alt="test"
+				on:click={() => goto('/about')}
+				on:keydown={() => goto('/about')}
 			/>
 		</div>
 		<div class="hider h-full w-full bg-black"></div>

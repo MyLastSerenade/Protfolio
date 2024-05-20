@@ -1,5 +1,6 @@
 <script lang="ts">
     import '../app.css';
+    import "@fontsource/material-symbols-outlined";
 </script>
 
 <nav>
